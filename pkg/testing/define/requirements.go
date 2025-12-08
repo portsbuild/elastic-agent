@@ -25,6 +25,8 @@ const (
 	Windows = component.Windows
 	// Kubernetes is Kubernetes platform
 	Kubernetes = "kubernetes"
+	// FreeBSD is FreeBSD platform
+	FreeBSD = component.FreeBSD
 )
 
 const (

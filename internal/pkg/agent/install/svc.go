@@ -148,6 +148,11 @@ func newService(topPath string, opt ...serviceOpt) (service.Service, error) {
 		cfg.Option["LogDirectory"] = topPath
 	}
 
+	if runtime.GOOS == "freebsd" {
+		cfg.Option["StandardOutPath"] = filepath.Join(topPath, fmt.Sprintf("%s.out.log", paths.ServiceName()))
+		cfg.Option["StandardErrorPath"] = filepath.Join(topPath, fmt.Sprintf("%s.err.log", paths.ServiceName()))
+	}
+
 	return service.New(nil, cfg)
 }
 

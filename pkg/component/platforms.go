@@ -25,6 +25,8 @@ const (
 	Linux = "linux"
 	// Windows represents running on Windows
 	Windows = "windows"
+	// FreeBSD represents running on FreeBSD
+	FreeBSD = "freebsd"
 )
 
 const (
@@ -65,6 +67,11 @@ var GlobalPlatforms = Platforms{
 		OS:   Darwin,
 		Arch: ARM64,
 		GOOS: Darwin,
+	},
+	{
+		OS:   FreeBSD,
+		Arch: AMD64,
+		GOOS: FreeBSD,
 	},
 	{
 		OS:   Linux,
