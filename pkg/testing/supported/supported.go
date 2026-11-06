@@ -10,6 +10,7 @@ import (
 
 	"github.com/elastic/elastic-agent/pkg/testing/common"
 	"github.com/elastic/elastic-agent/pkg/testing/define"
+	"github.com/elastic/elastic-agent/pkg/testing/freebsd"
 	"github.com/elastic/elastic-agent/pkg/testing/kubernetes"
 	"github.com/elastic/elastic-agent/pkg/testing/linux"
 	"github.com/elastic/elastic-agent/pkg/testing/windows"
@@ -180,6 +181,14 @@ var (
 			Version: "2016-core",
 		},
 		Runner: windows.WindowsRunner{},
+	}
+	FreeBSD = common.SupportedOS{
+		OS: define.OS{
+			Type: define.FreeBSD,
+			Arch: define.AMD64,
+			// Version:       "",
+		},
+		Runner: freebsd.FreeBSDRunner{},
 	}
 )
 

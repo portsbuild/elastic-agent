@@ -444,3 +444,7 @@ tool (
 	golang.org/x/tools/cmd/stringer
 	gotest.tools/gotestsum
 )
+
+// replace github.com/elastic/go-sysinfo => github.com/jetrmm/go-sysinfo v0.1.3
+replace github.com/elastic/go-sysinfo => ../go-sysinfo
+// replace github.com/elastic/elastic-agent-system-metrics => ../elastic-agent-system-metrics
